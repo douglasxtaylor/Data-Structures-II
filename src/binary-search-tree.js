@@ -11,8 +11,13 @@ class BinarySearchTree {
   // Wraps the input value in a new BinarySearchTree and
   // assigns it to either the left or right subtree,
   // depending on its value
-  insert(value) {
 
+  insert(value) {
+    const node = this.root;
+    if (node === null) {
+      this.root = new BinarySearchTree(value);
+      return;
+    }
   }
   // Checks the binary search tree for the input target
   // Can be written recursively or iteratively
